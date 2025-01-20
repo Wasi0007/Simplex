@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json ./
-RUN npm ci --production --force  # Use 'npm ci' for faster and clean installs
+RUN npm ci --production=false --force  # Use 'npm ci' for faster and clean installs
 
 # Copy the rest of your application code
 COPY . .
